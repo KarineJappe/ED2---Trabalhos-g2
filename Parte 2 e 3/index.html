@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="corpo container-fluid">
+        <header class="flexBoxCenter">
+            <div>
+                <h1>Estruturas de dados II</h1>
+            </div>
+        </header>
+
+        <div class="flexBoxCenter">
+            <form id="formulario">
+                <label for="cgu">CGU</label>
+                <input name="cgu" type="number" id="cgu" placeholder="CGU"></input>
+                <label for="nome">Nome</label>
+                <input name="nome" type="text" id="nome" placeholder="Nome"></input>
+        </div>
+
+        <div class="flexBoxCenter" id="botoes">
+            <button type="button" class="btn btn-outline-dark btnNav" id="adicionar">Adicionar</button>
+            <button type="button" class="btn btn-outline-dark btnNav" id="pesquisar">Pesquisar</button>
+            <button type="button" class="btn btn-outline-dark btnNav" id="remover">Remover</button>    
+        </div>
+        <span id="mensagens"></span>
+    </form>
+
+        <table class="table table-ligth">
+            <tr>
+                <th>Vetor</th>
+                <th>CGU</th>
+                <th>Nome</th>
+            </tr>
+        </table>
+    </div>
+   
+    <script src="table.js"></script>
+    <script src="hash.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

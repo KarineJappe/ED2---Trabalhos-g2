@@ -1,0 +1,20 @@
+.corpo{
+    width: 80%;
+    background-color: rgba(54, 147, 190, 0.171);
+    padding: 8em 8em 8em 8em;
+    border: 2px  solid black;
+}
+
+h1{
+    color: black;
+}
+
+.btn{
+    margin: 1em !important;  
+}
+.flexBoxCenter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

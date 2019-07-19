@@ -5,7 +5,8 @@ class Funcoes{
     add(elem){
         this.vetor.push(elem);
     }
-        
+// função que pesquisa sequencialmente se cgu está contido na tabela
+//retorno booleano   
     pesquisaSequencial(cgu){
         let cont = 0;
         let achou = false;
@@ -19,7 +20,8 @@ class Funcoes{
         }
         return achou;
     }
-
+    // função de pesquisa binária
+    //retotno booleano
     pesquisaBinaria(cgu) {
         let inicio = 0;
         let fim =this.vetor.length - 1;
@@ -40,6 +42,8 @@ class Funcoes{
         }
         return achou;
     }
+
+   // função de ordenação sofisticada 
     cocktail() {
         let inicio=0;
         let fim = this.vetor.length - 1;

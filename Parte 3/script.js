@@ -45,14 +45,10 @@ function addAluno(aluno, mensagem) {
     }else{
         console.log(verif);
         
-        tabela.addCguTabela(aluno, verif);
+        tabela.addTr(aluno, verif);
         mensagem.textContent = 'Aluno adicionado';
     }
 }
-
-
-
-
 
 function pesquisa(mensagem, aluno) {
     if(hash.pesquisar(aluno)){

@@ -1,6 +1,6 @@
 .corpo{
+    width: 90%;
     border: 1px solid black;
-    height: 600px;
     background-color: rgba(209, 43, 43, 0.082);
     padding: 8em 8em 8em 8em;  
 }
@@ -11,7 +11,7 @@ h1{
     margin: 1em !important;
 }
 
-.flexBoxCenter{
+.flexBox{
     display: flex;
     flex-direction: row;
     justify-content: center;

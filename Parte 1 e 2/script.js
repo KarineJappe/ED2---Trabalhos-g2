@@ -6,40 +6,32 @@ document.querySelectorAll('.btnNav').forEach(btn => {
         event.preventDefault();
 
         let form = document.querySelector('#formulario');
-        let atributo = btn.getAttribute('id');
-        let campo = document.querySelector('#mensagens');
+        let op = btn.getAttribute('id');
+        let msg = document.querySelector('#mensagens');
         
         let aluno = {
             cgu: parseInt(form.cgu.value),
             nome: form.nome.value
         }
 
-        if(atributo == 'adicionar'){
-            limpaMensagens(campo);
+        if(op == 'adicionar'){
+            limpaMensagens(msg);
             addAluno(aluno);
-        }else if(atributo == 'pesquisaSequencial'){
-            limpaMensagens(campo);
+        }else if(op == 'pesquisaSequencial'){
+            limpaMensagens(msg);
             let resp = funcao.pesquisaSequencial(aluno.cgu);
-            mostraMensagemPesquisa(resp, campo);
-        }else if(atributo == 'pesquisaBinaria'){
-            limpaMensagens(campo);
+            mostraMensagemPesquisa(resp, msg);
+        }else if(op == 'pesquisaBinaria'){
+            limpaMensagens(msg);
             let resp2 = funcao.pesquisaBinaria(aluno.cgu);
-            mostraMensagemPesquisa(resp2, campo);
-        }else if(atributo == 'ordena'){
-            tabela.addArrayTabela(funcao.cocktail());
+            mostraMensagemPesquisa(resp2, msg);
+        }else if(op == 'ordenar'){
+            tabela.vetorTabela(funcao.cocktail());
         }
         form.reset();
         form.cgu.focus();
     }
 });
-
-function verificaAluno(aluno) {    
-    if (isNaN(aluno.cgu) || aluno.nome == '') {
-        return false;
-    }else{
-        return true;
-    }
-}
 
 function pesquisa(aluno){
     let verif = funcao.pesquisaSequencial(aluno);
@@ -55,7 +47,7 @@ function mensagemPesquisa(verif){
 
 function addAluno(aluno) {
     funcao.add(aluno);
-    tabela.addElemTabela(aluno);
+    tabela.addTr(aluno);
 }
 
 function mostraMensagemPesquisa(resp, campo) {
@@ -68,14 +60,15 @@ function mostraMensagemPesquisa(resp, campo) {
     }
 }
 
-function mostraMensagemAdd(campo) {
-    campo.innerHTML = '';
-    campo.textContent = 'Preencha os campos corretamente.';
-}
-
 function limpaMensagens(campo) {
     campo.innerHTML = '';
 }
+
+// function mostraMensagemAdd(campo) {
+//     campo.innerHTML = '';
+//     campo.textContent = 'Preencha os campos corretamente.';
+// }
+
 
 // function addTabela(aluno) {
 //     let table = document.querySelector('table');

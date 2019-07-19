@@ -1,7 +1,6 @@
 class Hash{
     constructor(){
         this.vetor =[];
-        this.limmite=50;
         // this.limite = 50;
     }
     adicionar(aluno){
